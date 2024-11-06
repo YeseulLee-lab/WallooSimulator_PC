@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 9797fed60b1f37448b32f9efc4eb9a6c
+labels:
+- curves
+timeCreated: 1426121504
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Animations/MenuAnimators/RawAnimations/TopDownAnimation/Closed.anim
+  uploadId: 329853

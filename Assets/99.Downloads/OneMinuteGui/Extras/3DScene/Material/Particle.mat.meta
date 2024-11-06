@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5147a09f80497c946afa68b7b7da2ab1
+timeCreated: 1425565573
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Extras/3DScene/Material/Particle.mat
+  uploadId: 329853

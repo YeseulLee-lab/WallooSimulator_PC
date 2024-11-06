@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: b70ef47c37ab6634ea2340ee53b13818
+labels:
+- UI
+- Iconography
+- icons
+timeCreated: 1425590140
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Iconography/LightVersion/Confirm.prefab
+  uploadId: 329853

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 23a2478b095e63544a5624054d618de0
+labels:
+- UI
+- Iconography
+- icons
+timeCreated: 1425590133
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Iconography/LightVersion/Star.prefab
+  uploadId: 329853

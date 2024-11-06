@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: f6bc8230567db9c419268251161ef151
+labels:
+- joystick
+timeCreated: 1425592091
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Custom Elements - Components/JoystickArrows.prefab
+  uploadId: 329853

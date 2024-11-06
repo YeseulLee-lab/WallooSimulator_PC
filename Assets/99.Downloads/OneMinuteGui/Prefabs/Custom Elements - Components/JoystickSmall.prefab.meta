@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 3030d19db80463c4bbbab4331f10437f
+labels:
+- joystick
+timeCreated: 1425592095
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Custom Elements - Components/JoystickSmall.prefab
+  uploadId: 329853

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: bd6fabdda086a2d41ae519ae79cf9ed2
+labels:
+- switch
+timeCreated: 1425592117
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Custom Elements - Components/SwitchBlue.prefab
+  uploadId: 329853

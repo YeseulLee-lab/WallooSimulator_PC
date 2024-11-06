@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 54224668e8c53c1469bdd57c7050056f
+labels:
+- GUI
+- UI
+- Menu
+- Plugin
+- UIButtons
+- Iconography
+- Panels
+- MenuExample
+timeCreated: 1425593929
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Menus - Panels/ShopMenu.prefab
+  uploadId: 329853

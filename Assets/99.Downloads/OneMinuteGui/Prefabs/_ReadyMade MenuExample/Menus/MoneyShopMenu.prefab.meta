@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 5704c215deb24334cb0ac210bf07af7d
+labels:
+- moneyshop
+timeCreated: 1427113820
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/_ReadyMade MenuExample/Menus/MoneyShopMenu.prefab
+  uploadId: 329853

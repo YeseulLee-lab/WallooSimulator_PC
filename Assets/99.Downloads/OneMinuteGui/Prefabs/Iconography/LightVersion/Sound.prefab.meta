@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 07616620e76f15443881ab00b8875812
+labels:
+- UI
+- Iconography
+- icons
+timeCreated: 1425590123
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Iconography/LightVersion/Sound.prefab
+  uploadId: 329853

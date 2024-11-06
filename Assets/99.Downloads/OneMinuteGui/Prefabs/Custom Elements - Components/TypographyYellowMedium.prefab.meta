@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 875af4c7181f7f24ba8082240fa25a94
+labels:
+- Iconography
+- Font
+- Typography
+timeCreated: 1425592133
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Custom Elements - Components/TypographyYellowMedium.prefab
+  uploadId: 329853

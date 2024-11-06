@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 8a90f54133524b24bb3958b5cacdda2e
+labels:
+- UI
+- Iconography
+- icons
+timeCreated: 1425590132
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Iconography/LightVersion/Facebook.prefab
+  uploadId: 329853

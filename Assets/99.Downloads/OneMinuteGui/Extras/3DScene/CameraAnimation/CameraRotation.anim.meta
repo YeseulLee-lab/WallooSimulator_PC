@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7142d6536f5fa3945acb9110db2e5eb8
+timeCreated: 1427110867
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Extras/3DScene/CameraAnimation/CameraRotation.anim
+  uploadId: 329853

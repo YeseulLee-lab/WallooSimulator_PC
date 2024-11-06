@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 8a587865f5ec7754b872ec27cd6c592a
+labels:
+- UI
+- Iconography
+- icons
+timeCreated: 1425590120
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Iconography/LightVersion/Dolar.prefab
+  uploadId: 329853

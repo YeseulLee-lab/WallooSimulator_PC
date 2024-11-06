@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: e1f88d517abf4b54095fff9163fdc60b
+labels:
+- UI
+- Iconography
+- icons
+timeCreated: 1425590134
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Iconography/LightVersion/Twitter.prefab
+  uploadId: 329853

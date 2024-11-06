@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 95992e4c67ae03d4299e1f52d229d536
+labels:
+- PSD
+- AI
+- Iconography
+- Sprites
+- icons
+timeCreated: 1425590840
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Iconography/DarkVersion/Start.prefab
+  uploadId: 329853

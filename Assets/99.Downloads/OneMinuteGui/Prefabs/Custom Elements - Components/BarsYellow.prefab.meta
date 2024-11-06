@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 78d2270ae299a7949a753ddcbfc5ebae
+labels:
+- bar
+timeCreated: 1425592102
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Custom Elements - Components/BarsYellow.prefab
+  uploadId: 329853

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 2d694ff58b9f78645888b99c40c80841
+labels:
+- PSD
+- AI
+- Iconography
+- Sprites
+- icons
+timeCreated: 1425590838
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Iconography/DarkVersion/ShopPanel.prefab
+  uploadId: 329853

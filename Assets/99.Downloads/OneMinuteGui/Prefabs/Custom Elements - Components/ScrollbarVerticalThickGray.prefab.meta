@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 38ba48b2cb1d5e74e8acfcbaf98748dd
+labels:
+- scrollbar
+timeCreated: 1425592123
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Custom Elements - Components/ScrollbarVerticalThickGray.prefab
+  uploadId: 329853

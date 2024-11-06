@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fbc1426782cd4a149bca1a06099affae
+timeCreated: 1425592099
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Custom Elements - Components/BoostButtonGreen.prefab
+  uploadId: 329853

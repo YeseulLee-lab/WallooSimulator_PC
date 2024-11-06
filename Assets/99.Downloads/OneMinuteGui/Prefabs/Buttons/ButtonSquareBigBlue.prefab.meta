@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 2fc778bc60aa3a645bd1d4a787b1efc8
+labels:
+- UIButtons
+timeCreated: 1425570142
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Buttons/ButtonSquareBigBlue.prefab
+  uploadId: 329853

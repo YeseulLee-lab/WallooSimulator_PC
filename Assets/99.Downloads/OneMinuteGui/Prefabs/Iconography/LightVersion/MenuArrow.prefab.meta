@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: eb7eee5ca19537a428fa2ebc300919a1
+labels:
+- UI
+- Iconography
+- icons
+timeCreated: 1425590095
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Iconography/LightVersion/MenuArrow.prefab
+  uploadId: 329853

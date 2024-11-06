@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: d106e442d0b512d4f8abab8bbef9880b
+labels:
+- UIButtons
+timeCreated: 1425570129
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Buttons/ButtonSquareBigRed.prefab
+  uploadId: 329853

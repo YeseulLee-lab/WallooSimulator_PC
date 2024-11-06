@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f105ed41cbdba494fa53f962a39c5e70
+timeCreated: 1426800982
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Extras/3DScene/Material/Blue.mat
+  uploadId: 329853

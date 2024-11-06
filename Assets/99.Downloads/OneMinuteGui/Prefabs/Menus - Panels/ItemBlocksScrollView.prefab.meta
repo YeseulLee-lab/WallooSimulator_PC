@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 9d6c52eb218f8664293130bc1bc53a93
+labels:
+- GUI
+- UI
+- Menu
+- Plugin
+- UIButtons
+- Iconography
+- Panels
+- MenuExample
+timeCreated: 1425593431
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Menus - Panels/ItemBlocksScrollView.prefab
+  uploadId: 329853

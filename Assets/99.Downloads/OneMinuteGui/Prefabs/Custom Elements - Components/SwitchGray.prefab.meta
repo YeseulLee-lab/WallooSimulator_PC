@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 26b35fd8c75c99a44821a2893a99b665
+labels:
+- switch
+timeCreated: 1425592113
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Custom Elements - Components/SwitchGray.prefab
+  uploadId: 329853

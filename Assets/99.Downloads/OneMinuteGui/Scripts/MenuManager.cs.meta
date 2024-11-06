@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: 8053c177e2dcd4066ab1f2fc792c04ed
+labels:
+- Sprites
+- UITransitions
+- UIANimations
+- Menu
+- Plugin
+- UI
+- iosgui
+- noesisgui
+- mobile
+- Interface
+- HUD
+- UnityGUI
+- uGUI
+- menumanagerscript
+- menumanager
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Scripts/MenuManager.cs
+  uploadId: 329853

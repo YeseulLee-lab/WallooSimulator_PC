@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 7c2612bfba6f1b3459d84c1d0d0e6290
+labels:
+- UITransitions
+- UIANimations
+timeCreated: 1427108311
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Animations/MenuAnimators/InitialScaleAnimation.controller
+  uploadId: 329853

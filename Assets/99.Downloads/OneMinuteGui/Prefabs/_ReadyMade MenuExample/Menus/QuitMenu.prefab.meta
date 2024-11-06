@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: faa7a3b88de91324f8fbeeb6266fcba1
+labels:
+- quitmenu
+timeCreated: 1427113815
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/_ReadyMade MenuExample/Menus/QuitMenu.prefab
+  uploadId: 329853

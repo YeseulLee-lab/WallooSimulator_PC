@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4b7c40993f5428b448df3f71c9be5be6
+labels:
+- AI
+- Illustrator
+timeCreated: 1427111674
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/RawSprites/OneMinuteGUI_AI.ai
+  uploadId: 329853

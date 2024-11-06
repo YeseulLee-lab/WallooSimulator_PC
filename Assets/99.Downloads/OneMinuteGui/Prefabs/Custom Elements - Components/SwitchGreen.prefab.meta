@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 6e54b972d400a584f89b96864e06050d
+labels:
+- switch
+timeCreated: 1425592115
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Custom Elements - Components/SwitchGreen.prefab
+  uploadId: 329853
