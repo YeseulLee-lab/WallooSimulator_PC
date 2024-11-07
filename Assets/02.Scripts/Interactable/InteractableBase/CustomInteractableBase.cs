@@ -2,8 +2,10 @@ using Cysharp.Threading.Tasks;
 using System;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class CustomInteractableBase : MonoBehaviour
+[RequireComponent(typeof(Outline))]
+public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     //오브젝트 데이터
     [SerializeField]
@@ -23,8 +25,10 @@ public class CustomInteractableBase : MonoBehaviour
     {
         if(GetComponent<Animator>() != null)
             _animator = GetComponent<Animator>();
+        GetComponent<Outline>().enabled = false;
 
         originTransform = transform;
+
     }
     #endregion
 
@@ -104,6 +108,16 @@ public class CustomInteractableBase : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        GetComponent<Outline>().enabled = true;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        GetComponent<Outline>().enabled = false;
     }
     #endregion
 }
