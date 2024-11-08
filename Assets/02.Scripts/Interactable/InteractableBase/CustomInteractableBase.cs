@@ -27,6 +27,11 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
             _animator = GetComponent<Animator>();
         GetComponent<Outline>().enabled = false;
 
+        Color color;
+        ColorUtility.TryParseHtmlString("#9BFFAF", out color);
+        GetComponent<Outline>().OutlineColor = color;
+        GetComponent<Outline>().OutlineWidth = 4f;
+
         originTransform = transform;
 
     }
