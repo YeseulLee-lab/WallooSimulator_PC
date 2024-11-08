@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 07d8a2e879ab90247bf713e1012917d2
+labels:
+- UIButtons
+timeCreated: 1425570136
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Buttons/ButtonSquareBigGrey.prefab
+  uploadId: 329853

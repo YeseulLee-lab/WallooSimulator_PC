@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: cb30e3d06cf087048a82b0acdd444abc
+labels:
+- toggle
+timeCreated: 1425592106
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Custom Elements - Components/ToggleImageGreen.prefab
+  uploadId: 329853

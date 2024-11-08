@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 24959abb8b1da974ebe7159dfaafc7d6
+labels:
+- scrollbar
+timeCreated: 1425592121
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Custom Elements - Components/ScrollbarHorizontalHugeBlue.prefab
+  uploadId: 329853

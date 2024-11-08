@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: f34d621741d0e23498ebd8bc9e09a4e8
+labels:
+- scrollbar
+timeCreated: 1425592120
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Custom Elements - Components/ScrollbarHorizontalBigGreen.prefab
+  uploadId: 329853

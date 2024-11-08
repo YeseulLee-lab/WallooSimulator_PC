@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 10c9baf4e9cb147d9959bc06dbb52870
+timeCreated: 1426800957
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Extras/3DScene/Material/Red.mat
+  uploadId: 329853

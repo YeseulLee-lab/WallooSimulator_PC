@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 71e8a48dba2b6c44ca2c9cedccb16645
+labels:
+- toggle
+timeCreated: 1425592109
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Custom Elements - Components/ToggleImageBigRed.prefab
+  uploadId: 329853

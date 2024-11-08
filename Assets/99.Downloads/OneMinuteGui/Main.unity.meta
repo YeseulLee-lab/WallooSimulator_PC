@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5442409c469c77c42b6d6bda6a67b839
+timeCreated: 1498553827
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Main.unity
+  uploadId: 329853

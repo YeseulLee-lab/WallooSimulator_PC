@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e614d407e1714409ab54a10363b04f43
+timeCreated: 1426800990
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Extras/3DScene/Material/Grey.mat
+  uploadId: 329853

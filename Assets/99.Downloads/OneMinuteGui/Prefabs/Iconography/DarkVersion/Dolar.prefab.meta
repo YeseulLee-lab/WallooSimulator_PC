@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: b4185f0beace7834ebb89a77107c68c2
+labels:
+- PSD
+- AI
+- Iconography
+- Sprites
+- icons
+timeCreated: 1425590854
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Iconography/DarkVersion/Dolar.prefab
+  uploadId: 329853

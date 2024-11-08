@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4e4e31588ba19444689dab8f186b27bb
+timeCreated: 1426801004
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Extras/3DScene/Material/White.mat
+  uploadId: 329853

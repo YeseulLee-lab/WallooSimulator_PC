@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 30973784513b31b46877af7de2b120c0
+labels:
+- Iconography
+- Font
+- Typography
+timeCreated: 1425592131
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Custom Elements - Components/TypographyGreenBig.prefab
+  uploadId: 329853

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a4755c85b58455b4ea01ac2ce40fd846
+timeCreated: 1432418075
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/_ReadyMade MenuExample/MenuExample.prefab
+  uploadId: 329853

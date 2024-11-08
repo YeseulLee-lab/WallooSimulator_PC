@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8f914a23dacd77242b06a79698a430f3
+labels:
+- level
+timeCreated: 1427113813
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/_ReadyMade MenuExample/Menus/LevelMenu.prefab
+  uploadId: 329853

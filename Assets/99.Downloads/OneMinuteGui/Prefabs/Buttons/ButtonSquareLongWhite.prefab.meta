@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 6e0e777a601c2a649b0387c4ccd3fb57
+labels:
+- UIButtons
+timeCreated: 1425570148
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Prefabs/Buttons/ButtonSquareLongWhite.prefab
+  uploadId: 329853

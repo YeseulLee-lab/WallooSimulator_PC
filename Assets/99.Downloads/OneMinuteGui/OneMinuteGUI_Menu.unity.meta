@@ -1,0 +1,70 @@
+fileFormatVersion: 2
+guid: e0df4c9aaea547a4b9a0503b78a1dfac
+labels:
+- GUI
+- Menu
+- Plugin
+- UI
+- Sprites
+- UITransitions
+- UIANimations
+- UIButtons
+- Components
+- Panels
+- MenuExample
+- Iconography
+- PSD
+- AI
+- Photoshop
+- Illustrator
+- Typography
+- Font
+- SoundClick
+- lowpoly
+- HUD
+- Interface
+- UnityGUI
+- uGUI
+- Sounds
+- ngui
+- noesisgui
+- iosgui
+- mobile
+- sliced
+- atlas
+- bubble
+- scrollbar
+- switch
+- joystick
+- toggle
+- fill
+- input
+- curves
+- credits
+- level
+- mainmenu
+- moneyshop
+- optionsmenu
+- quitmenu
+- shopmenu
+- circle
+- bar
+- boost
+- cartoonparticles
+- icons
+- menumanager
+- menumanagerscript
+- menuplugin
+timeCreated: 1425597229
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/OneMinuteGUI_Menu.unity
+  uploadId: 329853

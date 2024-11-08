@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: bd1a8667ace261644a882377e99deccb
+labels:
+- curves
+timeCreated: 1425642602
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32346
+  packageName: One Minute GUI
+  packageVersion: 2.0
+  assetPath: Assets/OneMinuteGui/Animations/MenuAnimators/RawAnimations/ScaleAnimation/Closed.anim
+  uploadId: 329853
