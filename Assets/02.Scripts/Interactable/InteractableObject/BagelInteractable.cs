@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BagelInteractable : CustomGrabInteractableBase
+public class BagelInteractable : CustomInteractableBase
 {
     [SerializeField]
     private GameObject _ateBagel;

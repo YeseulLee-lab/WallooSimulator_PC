@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterInteractable : CustomGrabInteractableBase
+public class WaterInteractable : CustomInteractableBase
 {
     [SerializeField]
     private GameObject _waterParticle;

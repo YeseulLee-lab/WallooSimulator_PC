@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Outline))]
-public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     //오브젝트 데이터
     [SerializeField]
@@ -66,13 +66,6 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
         }
     }
 
-    //Grip Button Up
-    public virtual void SelectExit()
-    {
-        if (_animator != null)
-            _animator.SetBool("isWallooing", false);
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         //바닥에 닿으면 원래자리로 돌아감
@@ -114,6 +107,9 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
             }
         }
     }
+    #endregion
+
+    #region EventSystem
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -123,6 +119,14 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
     public void OnPointerExit(PointerEventData eventData)
     {
         GetComponent<Outline>().enabled = false;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (_animator != null)
+            _animator.SetBool("isWallooing", false);
+
+        PlayWallooAction();
     }
     #endregion
 }

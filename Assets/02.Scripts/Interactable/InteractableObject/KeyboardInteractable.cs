@@ -11,9 +11,4 @@ public class KeyboardInteractable : CustomInteractableBase
     {
         base.PlayWallooAction();
     }
-
-    public override void SelectExit()
-    {
-        base.SelectExit();
-    }
 }
