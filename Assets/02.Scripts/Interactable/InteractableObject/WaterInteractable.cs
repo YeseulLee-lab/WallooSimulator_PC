@@ -6,15 +6,12 @@ public class WaterInteractable : CustomInteractableBase
 {
     [SerializeField]
     private GameObject _waterParticle;
-    [SerializeField]
-    private AudioClip _waterAudioClip;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<WaterPoint>() != null)
         {
             other.GetComponent<WaterPoint>()._plantAnimator.SetBool("isWallooing", true);
-            AudioManager.instance.PlaySound(_waterAudioClip);
             WaterToPlant(true);
         }
     }

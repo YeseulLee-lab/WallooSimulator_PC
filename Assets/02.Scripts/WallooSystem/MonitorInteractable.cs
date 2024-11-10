@@ -8,8 +8,6 @@ public class MonitorInteractable : CustomInteractableBase
 {
     [SerializeField]
     private Image black;
-    [SerializeField]
-    private AudioClip _buttonAudioClip;
 
     #region Unity Life Cycle
     protected override void Start()
@@ -23,7 +21,6 @@ public class MonitorInteractable : CustomInteractableBase
         base.PlayWallooAction();
 
         Debug.Log("모니터 켜짐");
-        AudioManager.instance.PlaySound(_buttonAudioClip);
 
         GetComponent<BoxCollider>().enabled = false;
 

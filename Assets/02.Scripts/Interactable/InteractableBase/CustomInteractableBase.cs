@@ -15,6 +15,8 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
 
     [SerializeField]
     protected Animator _animator;
+    [SerializeField]
+    private AudioClip _interactionAC;
 
     //coolTime
     protected float _curCoolTime = 0f;
@@ -33,7 +35,6 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
         GetComponent<Outline>().OutlineWidth = 4f;
 
         originTransform = transform;
-
     }
     #endregion
 
@@ -45,6 +46,9 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
         {
             Debug.Log("월루 행동시작");
             _isWallooing = true;
+
+            AudioManager.instance.PlaySound(_interactionAC);
+
             if (_interactableData != null)
             {
                 WallooManager.instance.doubtRate += _interactableData.doubtRate;
@@ -56,7 +60,7 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
                 _animator.SetBool("isWallooing", true);
                 _animator.enabled = true;
             }
-                
+            
 
             UniCoolTime().Forget();
         }
