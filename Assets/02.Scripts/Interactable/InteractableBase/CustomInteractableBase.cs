@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Outline))]
-public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
     //오브젝트 데이터
     [SerializeField]
@@ -125,12 +125,19 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
         GetComponent<Outline>().enabled = false;
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public virtual void OnPointerDown(PointerEventData eventData)
+    {
+        if (_animator != null)
+            _animator.SetBool("isWallooing", true);
+
+        if(WallooManager.instance.isWorkStart)
+            PlayWallooAction();
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
     {
         if (_animator != null)
             _animator.SetBool("isWallooing", false);
-
-        PlayWallooAction();
     }
     #endregion
 }
