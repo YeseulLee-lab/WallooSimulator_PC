@@ -162,6 +162,7 @@ PlayerSettings:
   androidMinAspectRatio: 1
   applicationIdentifier:
     Android: com.DefaultCompany.WallooSimulator
+    Standalone: com.DefaultCompany.WallooSimulator
   buildNumber:
     Bratwurst: 0
     Standalone: 0
