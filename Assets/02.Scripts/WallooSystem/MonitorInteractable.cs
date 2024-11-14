@@ -34,6 +34,17 @@ public class MonitorInteractable : CustomInteractableBase
         WallooManager.instance.isWorkStart = true;
     }
 
+    public override void OnPointerEnter(PointerEventData eventData)
+    {
+        GetComponent<Outline>().enabled = true;
+        //모니터 줌인
+    }
+
+    public override void OnPointerExit(PointerEventData eventData)
+    {
+        GetComponent<Outline>().enabled = false;
+    }
+
     public override void OnPointerDown(PointerEventData eventData)
     {
         PlayWallooAction();

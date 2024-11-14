@@ -11,10 +11,12 @@ public class Timer : MonoBehaviour
     [Header("----------UI----------")]
     private TextMeshProUGUI _timeTMP;
 
-    [Header("----------UI----------")]
+    [Header("----------Timer----------")]
     //총 근무시간
     private float _time = 0f;
+    private float _goalTime;
     private readonly Action _onTick;
+    private float _timerSpeed = 1f;
 
     private int _minute;
     private int _hour;
@@ -64,8 +66,12 @@ public class Timer : MonoBehaviour
             //총 근무시간이 9시간 미만이면
             if (_time < 32400f)
             {
-                await UniTask.Delay(TimeSpan.FromSeconds(1f), cancellationToken: _workTimeCTS.Token);
+                await UniTask.Delay(TimeSpan.FromSeconds(_timerSpeed), cancellationToken: _workTimeCTS.Token);
                 _time += 6f;
+                if (_time >= _goalTime)
+                {
+                    _timerSpeed = 1f;
+                }
                 CalculateTime(_time);
                 _onTick?.Invoke();
             }
@@ -75,6 +81,12 @@ public class Timer : MonoBehaviour
                 _workTimeCTS.Cancel();
             }
         }
+    }
+
+    public void SkipTime(float skipTime)
+    {
+        _goalTime = _time + skipTime;
+        _timerSpeed = 0.01f;
     }
     #endregion
 }

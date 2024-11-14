@@ -13,5 +13,7 @@ public class BagelInteractable : CustomInteractableBase
         base.OnPointerDown(eventData);
         GetComponent<MeshRenderer>().enabled = false;
         _ateBagel.SetActive(true);
+
+        //일정시간 후에 베이글 복원
     }
 }

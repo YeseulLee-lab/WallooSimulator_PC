@@ -51,6 +51,7 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
 
             if (_interactableData != null)
             {
+                WallooManager.instance.timer.SkipTime(_interactableData.skipTime);
                 WallooManager.instance.doubtRate += _interactableData.doubtRate;
                 WallooManager.instance.wallooScore += _interactableData.wallooScore;
             }
@@ -61,7 +62,6 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
                 _animator.enabled = true;
             }
             
-
             UniCoolTime().Forget();
         }
         else
@@ -115,14 +115,16 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
 
     #region EventSystem
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public virtual void OnPointerEnter(PointerEventData eventData)
     {
-        GetComponent<Outline>().enabled = true;
+        if (WallooManager.instance.isWorkStart)
+            GetComponent<Outline>().enabled = true;
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public virtual void OnPointerExit(PointerEventData eventData)
     {
-        GetComponent<Outline>().enabled = false;
+        if (WallooManager.instance.isWorkStart)
+            GetComponent<Outline>().enabled = false;
     }
 
     public virtual void OnPointerDown(PointerEventData eventData)

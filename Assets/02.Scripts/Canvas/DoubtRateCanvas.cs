@@ -7,17 +7,11 @@ public class DoubtRateCanvas : MonoBehaviour
 {
     [Header("----------GUI----------")]
     [SerializeField]
-    private Image _doubtRateBar;
+    private GameObject[] _yellowCards;
 
     #region Unity Life Cycle
     private void Start()
     {
-        WallooManager.instance._doubtRateChangedAction = (rate) => DoubtRateChange(rate);
     }
     #endregion
-
-    private void DoubtRateChange(float doubtRate)
-    {
-        _doubtRateBar.fillAmount = doubtRate * 0.01f;
-    }
 }

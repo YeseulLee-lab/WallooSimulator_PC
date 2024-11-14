@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PenHolder
   m_EditorClassIdentifier: 
   _name: "\uD39C\uD640\uB354"
-  _skipTime: 0
+  _skipTime: 240
   _wallooScore: 5
   _doubtRate: -20
   _coolTime: 20
