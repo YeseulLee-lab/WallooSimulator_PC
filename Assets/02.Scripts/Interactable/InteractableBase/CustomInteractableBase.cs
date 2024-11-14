@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using System;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Outline))]
@@ -18,6 +19,9 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
     [SerializeField]
     private AudioClip _interactionAC;
 
+    [Header("--------CoolTime--------")]
+    [SerializeField]
+    private Image _coolTimeImg;
     //coolTime
     protected float _curCoolTime = 0f;
     protected CancellationTokenSource _coolTimeCancel = new CancellationTokenSource();

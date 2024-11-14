@@ -86,7 +86,7 @@ public class Timer : MonoBehaviour
     public void SkipTime(float skipTime)
     {
         _goalTime = _time + skipTime;
-        _timerSpeed = 0.01f;
+        _timerSpeed = 0.005f;
     }
     #endregion
 }
