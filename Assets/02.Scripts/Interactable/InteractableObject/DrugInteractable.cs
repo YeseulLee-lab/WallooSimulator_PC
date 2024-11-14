@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DrugInteractable : MonoBehaviour
+public class DrugInteractable : CustomInteractableBase
 {
     private void OnTriggerEnter(Collider other)
     {

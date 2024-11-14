@@ -2,10 +2,11 @@ using Cysharp.Threading.Tasks;
 using System;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Outline))]
-public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
     //오브젝트 데이터
     [SerializeField]
@@ -15,7 +16,12 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
 
     [SerializeField]
     protected Animator _animator;
+    [SerializeField]
+    private AudioClip _interactionAC;
 
+    [Header("--------CoolTime--------")]
+    [SerializeField]
+    private Image _coolTimeImg;
     //coolTime
     protected float _curCoolTime = 0f;
     protected CancellationTokenSource _coolTimeCancel = new CancellationTokenSource();
@@ -33,7 +39,6 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
         GetComponent<Outline>().OutlineWidth = 4f;
 
         originTransform = transform;
-
     }
     #endregion
 
@@ -45,8 +50,12 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
         {
             Debug.Log("월루 행동시작");
             _isWallooing = true;
+
+            AudioManager.instance.PlaySound(_interactionAC);
+
             if (_interactableData != null)
             {
+                WallooManager.instance.timer.SkipTime(_interactableData.skipTime);
                 WallooManager.instance.doubtRate += _interactableData.doubtRate;
                 WallooManager.instance.wallooScore += _interactableData.wallooScore;
             }
@@ -56,21 +65,13 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
                 _animator.SetBool("isWallooing", true);
                 _animator.enabled = true;
             }
-                
-
+            
             UniCoolTime().Forget();
         }
         else
         {
             Debug.Log("아직 쿨타임이 안찼습니다.");
         }
-    }
-
-    //Grip Button Up
-    public virtual void SelectExit()
-    {
-        if (_animator != null)
-            _animator.SetBool("isWallooing", false);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -114,15 +115,35 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
             }
         }
     }
+    #endregion
 
-    public void OnPointerEnter(PointerEventData eventData)
+    #region EventSystem
+
+    public virtual void OnPointerEnter(PointerEventData eventData)
     {
-        GetComponent<Outline>().enabled = true;
+        if (WallooManager.instance.isWorkStart)
+            GetComponent<Outline>().enabled = true;
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public virtual void OnPointerExit(PointerEventData eventData)
     {
-        GetComponent<Outline>().enabled = false;
+        if (WallooManager.instance.isWorkStart)
+            GetComponent<Outline>().enabled = false;
+    }
+
+    public virtual void OnPointerDown(PointerEventData eventData)
+    {
+        if (_animator != null)
+            _animator.SetBool("isWallooing", true);
+
+        if(WallooManager.instance.isWorkStart)
+            PlayWallooAction();
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        if (_animator != null)
+            _animator.SetBool("isWallooing", false);
     }
     #endregion
 }

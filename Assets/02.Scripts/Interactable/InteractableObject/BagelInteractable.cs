@@ -1,21 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class BagelInteractable : CustomGrabInteractableBase
+public class BagelInteractable : CustomInteractableBase
 {
     [SerializeField]
     private GameObject _ateBagel;
-    [SerializeField]
-    private AudioClip _eatingAC;
 
-    private void OnTriggerEnter(Collider other)
+    public override void OnPointerDown(PointerEventData eventData)
     {
-        if (other.tag == "PlayerHead")
-        {
-            AudioManager.instance.PlaySound(_eatingAC);
-            GetComponent<MeshRenderer>().enabled = false;
-            _ateBagel.SetActive(true);
-        }
+        base.OnPointerDown(eventData);
+        GetComponent<MeshRenderer>().enabled = false;
+        _ateBagel.SetActive(true);
+
+        //일정시간 후에 베이글 복원
     }
 }
