@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private Button _settingBtn;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        _settingBtn.onClick.AddListener(() =>
+        {
+            UIManager.instance.Setting.SetActive(true);
+        });
     }
 }
