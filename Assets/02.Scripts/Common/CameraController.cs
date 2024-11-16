@@ -10,10 +10,10 @@ public class CameraController : MonoBehaviour
 
     private bool _isRotating = false;
 
-    public int _aRotateCnt = 1;
-    public int _dRotateCnt = 1;
-    public int _sRotateCnt = 1;
-    public int _wRotateCnt = 1;    
+    private int _aRotateCnt = 1;
+    private int _dRotateCnt = 1;
+    private int _sRotateCnt = 1;
+    private int _wRotateCnt = 1;    
 
     private void Start()
     {
