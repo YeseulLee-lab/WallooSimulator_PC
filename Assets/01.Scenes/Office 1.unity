@@ -2025,6 +2025,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d43e7f4bc2b14544a0a7d9660b65085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _aRotateCnt: 1
+  _dRotateCnt: 1
+  _sRotateCnt: 1
+  _wRotateCnt: 1
 --- !u!20 &339058839 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 1795731298477285490, guid: 38c905d5372b3db47b78ca2f6445c851, type: 3}
