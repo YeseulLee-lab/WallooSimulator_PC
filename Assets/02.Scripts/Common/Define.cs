@@ -8,7 +8,7 @@ public class Define
     {
         None,
         Login,
-        Office,
+        Office_1,
         Loading,
     }
 }

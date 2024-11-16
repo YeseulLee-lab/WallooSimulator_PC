@@ -12,7 +12,7 @@ public class Login : MonoBehaviour
     {
         _startBtn.onClick.AddListener(() =>
         {
-            SceneSwitcher.Instance.SwitchScene(Define.SceneName.Office);
+            SceneSwitcher.Instance.SwitchScene(Define.SceneName.Office_1);
         });
     }
 }
