@@ -86,6 +86,7 @@ public class WallooManager : MonoBehaviour
     private void Start()
     {
         InitData();
+        AudioManager.instance.PlayAmbientSound("OfficeAmbient");
     }
     #endregion
 
