@@ -19,7 +19,6 @@ public class AudioManager : MonoBehaviour
 
     AudioSource[] sfxSources;
     AudioSource[] musicSources;
-    int activeMusicSourceIndex;
 
     SoundLibrary library;
 

@@ -6,20 +6,13 @@ using UnityEngine.UI;
 public class Setting : MonoBehaviour
 {
     [SerializeField]
-    private Button _background;
-    [SerializeField]
-    private Button _closeBtn;
+    private Button _settingBtn;
 
     private void Start()
     {
-        _background.onClick.AddListener(() =>
+        _settingBtn.onClick.AddListener(() =>
         {
-            gameObject.SetActive(false);
-        });
-
-        _closeBtn.onClick.AddListener(() =>
-        {
-            gameObject.SetActive(false);
+            UIManager.instance.Setting.SetActive(true);
         });
     }
 }

@@ -38,7 +38,6 @@ public class SceneSwitcher : MonoBehaviour
     private void OnDestroy()
     {
         _loadingCor = null;
-        Instance = null;
     }
 
     private void Start()
