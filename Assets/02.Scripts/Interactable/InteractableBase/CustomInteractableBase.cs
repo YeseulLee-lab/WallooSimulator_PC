@@ -53,7 +53,7 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
             _isWallooing = true;
 
             AudioManager.instance.PlaySound(_interactionAC);
-            if(_interactableData.coolTime > 0f)
+            if(_interactableData?.coolTime > 0f)
                 _coolTimeImg.DOFillAmount(1f, _interactableData.coolTime).SetEase(Ease.Linear);
 
             if (_interactableData != null)
@@ -67,7 +67,7 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
         }
         else
         {
-            Debug.Log("아직 쿨타임이 안찼습니다.");
+            PopupManager.Instance.MouseToast.ShowToast("아직 쿨타임이 안찼습니다.", Input.mousePosition);
         }
     }
 
@@ -100,12 +100,12 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
                     //총 쿨타임 만큼 _curCoolTime 플러스
                     await UniTask.Delay(TimeSpan.FromSeconds(1f), cancellationToken: _coolTimeCancel.Token);
                     _curCoolTime += 1f;
-                    Debug.Log(_interactableData.name + "쿨타임: " + _curCoolTime);
+                    //Debug.Log(_interactableData.name + "쿨타임: " + _curCoolTime);
                 }
                 else
                 {
                     _coolTimeCancel.Cancel();
-                    Debug.Log("unitask 취소");
+                    //Debug.Log("unitask 취소");
                     _coolTimeImg.fillAmount = 0f;
                     _curCoolTime = 0f;
                     _isWallooing = false;
@@ -131,7 +131,7 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
 
     public virtual void OnPointerDown(PointerEventData eventData)
     {
-        if (_coolTimeCancel.IsCancellationRequested)
+        if (_curCoolTime <= 0f)
         {
             if (_animator != null)
                 _animator.SetBool("isWallooing", true);

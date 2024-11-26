@@ -28,4 +28,8 @@ public class PopupManager : MonoBehaviour
             return _twoButtonPopup;
         }
     }
+
+    [SerializeField]
+    private MouseToast _moustToast;
+    public MouseToast MouseToast => _moustToast;
 }

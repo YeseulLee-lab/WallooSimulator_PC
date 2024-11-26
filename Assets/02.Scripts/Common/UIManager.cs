@@ -8,8 +8,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     private SettingPopup _setting;
-
-    public SettingPopup Setting => _setting;
+    public SettingPopup Setting => _setting;    
 
     private void Awake()
     {
