@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RulesCanvas : Popup
+public class RulesPopup : Popup
 {
     [SerializeField]
     private GameObject[] _rulesArr;
@@ -14,17 +14,9 @@ public class RulesCanvas : Popup
 
     private int _curIdx = 0;
 
-    private void Start()
+    protected override void Start()
     {
-        _closeBtn?.onClick.AddListener(() =>
-        {
-            gameObject.SetActive(false);
-        });
-        _background?.onClick.AddListener(() =>
-        {
-            gameObject.SetActive(false);
-        });
-
+        base.Start();
         _nextBtn?.onClick.AddListener(() =>
         {
             _rulesArr[_curIdx].SetActive(false);

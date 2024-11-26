@@ -7,9 +7,9 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     [SerializeField]
-    private GameObject _setting;
+    private SettingPopup _setting;
 
-    public GameObject Setting => _setting;
+    public SettingPopup Setting => _setting;
 
     private void Awake()
     {

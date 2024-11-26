@@ -25,6 +25,11 @@ public class BossController : MonoBehaviour
         MoveBoss(0);
     }
 
+    private void OnDestroy()
+    {
+        DOTween.KillAll();
+    }
+
     private void MoveBoss(int index)
     {
         _boss.DOMove(_points[index].position, 3f).SetEase(Ease.Linear).OnComplete(() =>

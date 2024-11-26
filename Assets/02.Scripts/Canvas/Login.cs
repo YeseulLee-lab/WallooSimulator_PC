@@ -21,7 +21,7 @@ public class Login : MonoBehaviour
     [SerializeField]
     private Button _exitBtn;
     [SerializeField]
-    private GameObject _rulesCanvas;
+    private RulesPopup _rulesPopup;
 
     private void Start()
     {
@@ -32,12 +32,21 @@ public class Login : MonoBehaviour
 
         _rulesBtn.onClick.AddListener(() =>
         {
-            _rulesCanvas.SetActive(true);
+            _rulesPopup.ShowPopup();
         });
 
         _exitBtn.onClick.AddListener(() =>
         {
-            Application.Quit();
+            PopupManager.Instance.twoButtonPopup.ShowPopup("게임을 종료하시겠습니까?", 
+                () =>
+                {
+                    Application.Quit();
+                },
+                () =>
+                {
+                    
+                });
+            
         });
 
         _audioBtn.onClick.AddListener(SetAudioSp);

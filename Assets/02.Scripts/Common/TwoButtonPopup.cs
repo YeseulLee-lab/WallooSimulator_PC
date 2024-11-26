@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro.EditorUtilities;
@@ -7,6 +8,7 @@ using UnityEngine.UI;
 
 public class TwoButtonPopup : Popup
 {
+    [Header("--------Content--------")]
     [SerializeField]
     private Text _title;
     [SerializeField]
@@ -17,11 +19,12 @@ public class TwoButtonPopup : Popup
     public void ShowPopup(string title, UnityAction yesAction = null, UnityAction noAction = null)
     {
         gameObject.SetActive(true);
+        _content.DOScale(1f, 0.5f).SetEase(Ease.InOutExpo);
 
         _title.text = title;
         _yesBtn?.onClick.AddListener(() =>
         {
-            HidePopup();
+            gameObject.SetActive(false);
             yesAction?.Invoke();
         });
 

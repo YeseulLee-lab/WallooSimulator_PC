@@ -265,15 +265,15 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137369341}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1830033864}
   - {fileID: 262781815}
   - {fileID: 331230252}
-  m_Father: {fileID: 488573900}
+  m_Father: {fileID: 590543465}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1031,8 +1031,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 137369342}
+  m_Children: []
   m_Father: {fileID: 590543465}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1251,6 +1250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _closeBtn: {fileID: 0}
   _background: {fileID: 488573903}
+  _content: {fileID: 137369342}
   _title: {fileID: 1830033867}
   _noBtn: {fileID: 262781818}
   _yesBtn: {fileID: 331230249}
@@ -1267,6 +1267,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 488573900}
+  - {fileID: 137369342}
   m_Father: {fileID: 1966191722}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1653,7 +1654,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _closeBtn: {fileID: 1001470842}
-  _background: {fileID: 0}
+  _background: {fileID: 1913155021}
+  _content: {fileID: 1891189532}
   _rulesArr:
   - {fileID: 1876198918}
   - {fileID: 1048366329}
@@ -5032,7 +5034,7 @@ MonoBehaviour:
   _startBtn: {fileID: 1599460338}
   _rulesBtn: {fileID: 28614902}
   _exitBtn: {fileID: 2080762899}
-  _rulesCanvas: {fileID: 780249292}
+  _rulesPopup: {fileID: 780249297}
 --- !u!222 &4272717978706170363
 CanvasRenderer:
   m_ObjectHideFlags: 0

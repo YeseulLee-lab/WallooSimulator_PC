@@ -8,18 +8,9 @@ public class SettingPopup : Popup
     [SerializeField]
     private Button _backToMainBtn;
 
-    private void Start()
+    protected override void Start()
     {
-        _background.onClick.AddListener(() =>
-        {
-            gameObject.SetActive(false);
-        });
-
-        _closeBtn.onClick.AddListener(() =>
-        {
-            gameObject.SetActive(false);
-        });
-
+        base.Start();
         _backToMainBtn.onClick.AddListener(() =>
         {
             PopupManager.Instance.twoButtonPopup.ShowPopup("메인 화면으로 돌아가시겠습니까?", 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Setting : MonoBehaviour
+public class InGameMenu : MonoBehaviour
 {
     [SerializeField]
     private Button _settingBtn;
@@ -12,7 +12,7 @@ public class Setting : MonoBehaviour
     {
         _settingBtn.onClick.AddListener(() =>
         {
-            UIManager.instance.Setting.SetActive(true);
+            UIManager.instance.Setting.ShowPopup();
         });
     }
 }
