@@ -71,6 +71,19 @@ public class WallooManager : MonoBehaviour
         }
     }
 
+    private bool _isCaught;
+    public bool isCaught
+    {
+        get
+        {
+            return _isCaught;
+        }
+        set
+        {
+            _isCaught = value;
+        }
+    }
+
     public Action _workStateChangedAction{ private get; set; }
     public Action<float> _doubtRateChangedAction { private get; set; }
     public Action<float> _wallooScoreChangedAction{ private get; set; }

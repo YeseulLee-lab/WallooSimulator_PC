@@ -4,6 +4,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 
 [RequireComponent(typeof(Outline))]
 public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
@@ -52,18 +53,14 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
             _isWallooing = true;
 
             AudioManager.instance.PlaySound(_interactionAC);
+            if(_interactableData.coolTime > 0f)
+                _coolTimeImg.DOFillAmount(1f, _interactableData.coolTime).SetEase(Ease.Linear);
 
             if (_interactableData != null)
             {
                 WallooManager.instance.timer.SkipTime(_interactableData.skipTime);
                 WallooManager.instance.doubtRate += _interactableData.doubtRate;
                 WallooManager.instance.wallooScore += _interactableData.wallooScore;
-            }
-                
-            if (_animator != null)
-            {
-                _animator.SetBool("isWallooing", true);
-                _animator.enabled = true;
             }
             
             UniCoolTime().Forget();
@@ -109,6 +106,7 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
                 {
                     _coolTimeCancel.Cancel();
                     Debug.Log("unitask √Îº“");
+                    _coolTimeImg.fillAmount = 0f;
                     _curCoolTime = 0f;
                     _isWallooing = false;
                 }
@@ -133,10 +131,13 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
 
     public virtual void OnPointerDown(PointerEventData eventData)
     {
-        if (_animator != null)
-            _animator.SetBool("isWallooing", true);
+        if (_coolTimeCancel.IsCancellationRequested)
+        {
+            if (_animator != null)
+                _animator.SetBool("isWallooing", true);
+        }
 
-        if(WallooManager.instance.isWorkStart)
+        if (WallooManager.instance.isWorkStart)
             PlayWallooAction();
     }
 

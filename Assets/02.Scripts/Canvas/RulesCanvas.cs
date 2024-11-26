@@ -3,12 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RulesCanvas : MonoBehaviour
+public class RulesCanvas : Popup
 {
-    [SerializeField]
-    private Button _closeBtn;
-    [SerializeField]
-    private Button _backGround;
     [SerializeField]
     private GameObject[] _rulesArr;
     [SerializeField]
@@ -24,7 +20,7 @@ public class RulesCanvas : MonoBehaviour
         {
             gameObject.SetActive(false);
         });
-        _backGround?.onClick.AddListener(() =>
+        _background?.onClick.AddListener(() =>
         {
             gameObject.SetActive(false);
         });

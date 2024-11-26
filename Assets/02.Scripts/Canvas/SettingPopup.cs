@@ -3,12 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SettingUI : MonoBehaviour
+public class SettingPopup : Popup
 {
-    [SerializeField]
-    private Button _background;
-    [SerializeField]
-    private Button _closeBtn;
     [SerializeField]
     private Button _backToMainBtn;
 
@@ -26,7 +22,16 @@ public class SettingUI : MonoBehaviour
 
         _backToMainBtn.onClick.AddListener(() =>
         {
-            SceneSwitcher.Instance.SwitchScene(Define.SceneName.Login);
+            PopupManager.Instance.twoButtonPopup.ShowPopup("메인 화면으로 돌아가시겠습니까?", 
+            () =>
+            {
+                HidePopup();
+                SceneSwitcher.Instance.SwitchScene(Define.SceneName.Login);
+            },
+            () =>
+            {
+
+            });
         });
     }
 }
