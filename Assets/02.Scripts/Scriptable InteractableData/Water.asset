@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   _name: "\uBB3C\uBFCC\uB9AC\uAC1C"
-  _skipTime: 300
+  _skipTime: 1200
   _wallooScore: 0
   _doubtRate: 0
   _coolTime: 30

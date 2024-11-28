@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Book
   m_EditorClassIdentifier: 
   _name: "\uCC45"
-  _skipTime: 240
+  _skipTime: 1800
   _wallooScore: 20
   _doubtRate: 15
   _coolTime: 10

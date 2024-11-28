@@ -109,11 +109,17 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
                     _coolTimeCancel.Cancel();
                     //Debug.Log("unitask √Îº“");
                     _coolTimeImg.fillAmount = 0f;
+                    ResetObject();
                     _curCoolTime = 0f;
                     _isWallooing = false;
                 }
             }
         }
+    }
+
+    protected virtual void ResetObject()
+    {
+
     }
     #endregion
 
