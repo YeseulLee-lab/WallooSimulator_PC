@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
@@ -55,6 +56,7 @@ public class WallooManager : MonoBehaviour
         {
             _isWorkStart = value;
             _workStateChangedAction?.Invoke();
+            UniTimer().Forget();
         }
     }
 
@@ -89,6 +91,27 @@ public class WallooManager : MonoBehaviour
     public Action<float> _wallooScoreChangedAction{ private get; set; }
 
     public Timer timer;
+    private float _clearTime;
+    public float clearTime
+    {
+        get
+        {
+            return _clearTime;
+        }
+        set
+        {
+            _clearTime = value;
+        }
+    }
+
+    async UniTaskVoid UniTimer()
+    {
+        while (true)
+        {
+            await UniTask.Delay(TimeSpan.FromSeconds(1f));
+            _clearTime += 1f;
+        }
+    }
 
     #region Unity Life Cycle
     private void Awake()

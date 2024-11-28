@@ -15,6 +15,8 @@ public class BossController : MonoBehaviour
     private SkinnedMeshRenderer _bossSM;
     [SerializeField]
     private Material _transparentMat;
+    [SerializeField]
+    private float _speed;
 
     private Material _originalMat;
 
@@ -32,7 +34,7 @@ public class BossController : MonoBehaviour
 
     private void MoveBoss(int index)
     {
-        _boss.DOMove(_points[index].position, 3f).SetEase(Ease.Linear).OnComplete(() =>
+        _boss.DOMove(_points[index].position, _speed).SetEase(Ease.Linear).OnComplete(() =>
         {
             _bossSM.material = _transparentMat;
             _bossSM.material.DOFade(0f, 1f).OnComplete(() =>

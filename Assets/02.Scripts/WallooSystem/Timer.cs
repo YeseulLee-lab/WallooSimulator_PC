@@ -80,6 +80,7 @@ public class Timer : MonoBehaviour
             else
             {
                 Debug.Log("근무 종료");
+                UIManager.instance.GameResult.ShowSuccessResult();
                 _workTimeCTS.Cancel();
             }
         }
