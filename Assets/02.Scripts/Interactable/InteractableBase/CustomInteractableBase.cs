@@ -50,6 +50,8 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
         if (_curCoolTime <= 0f)
         {
             Debug.Log("월루 행동시작");
+            if (_animator != null)
+                _animator.SetBool("isWallooing", true);
             _isWallooing = true;
 
             AudioManager.instance.PlaySound(_interactionAC);
@@ -67,7 +69,7 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
         }
         else
         {
-            PopupManager.Instance.MouseToast.ShowToast("아직 쿨타임이 안찼습니다.", Input.mousePosition);
+            PopupManager.Instance.MouseToast.ShowToast("아직 쿨타임이 안찼습니다.");
         }
     }
 
@@ -133,12 +135,14 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
     {
         if (_curCoolTime <= 0f)
         {
-            if (_animator != null)
-                _animator.SetBool("isWallooing", true);
         }
 
         if (WallooManager.instance.isWorkStart)
             PlayWallooAction();
+        else
+        {
+            PopupManager.Instance.MouseToast.ShowToast("모니터를 켜야 근무를 시작합니다!");
+        }
     }
 
     public void OnPointerUp(PointerEventData eventData)
