@@ -16,4 +16,10 @@ public class BagelInteractable : CustomInteractableBase
 
         //일정시간 후에 베이글 복원
     }
+
+    protected override void ResetObject()
+    {
+        GetComponent<MeshRenderer>().enabled = true;
+        _ateBagel.SetActive(false);
+    }
 }

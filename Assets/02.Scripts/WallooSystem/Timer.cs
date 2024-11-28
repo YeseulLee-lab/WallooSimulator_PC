@@ -17,6 +17,7 @@ public class Timer : MonoBehaviour
     private float _goalTime;
     private readonly Action _onTick;
     private float _timerSpeed = 1f;
+    private float _addTime = 6f;
 
     private int _minute;
     private int _hour;
@@ -67,10 +68,11 @@ public class Timer : MonoBehaviour
             if (_time < 32400f)
             {
                 await UniTask.Delay(TimeSpan.FromSeconds(_timerSpeed), cancellationToken: _workTimeCTS.Token);
-                _time += 6f;
+                _time += _addTime;
                 if (_time >= _goalTime)
                 {
                     _timerSpeed = 1f;
+                    _addTime = 6f;
                 }
                 CalculateTime(_time);
                 _onTick?.Invoke();
@@ -78,6 +80,7 @@ public class Timer : MonoBehaviour
             else
             {
                 Debug.Log("근무 종료");
+                UIManager.instance.GameResult.ShowSuccessResult();
                 _workTimeCTS.Cancel();
             }
         }
@@ -86,6 +89,7 @@ public class Timer : MonoBehaviour
     public void SkipTime(float skipTime)
     {
         _goalTime = _time + skipTime;
+        _addTime = 60f;
         _timerSpeed = 0.005f;
     }
     #endregion

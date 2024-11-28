@@ -18,8 +18,7 @@ public class AudioManager : MonoBehaviour
     public float masterVolumePercent { get; private set; }
 
     AudioSource[] sfxSources;
-    AudioSource musicSources;
-    int activeMusicSourceIndex;
+    AudioSource[] musicSources;
 
     SoundLibrary library;
 
@@ -36,12 +35,16 @@ public class AudioManager : MonoBehaviour
 
             library = GetComponent<SoundLibrary>();
 
-            GameObject newMusicSource = new GameObject("Music Source ");
-            musicSources = newMusicSource.AddComponent<AudioSource>();
-            newMusicSource.transform.parent = transform;
+            musicSources = new AudioSource[2];
+            for (int i = 0; i < 2; i++)
+            {
+                GameObject newMusicSource = new GameObject("Music Source " + (i + 1));
+                musicSources[i] = newMusicSource.AddComponent<AudioSource>();
+                newMusicSource.transform.parent = transform;
+            }
 
-            sfxSources = new AudioSource[3];
-            for (int i = 0; i < 3; i++)
+            sfxSources = new AudioSource[2];
+            for (int i = 0; i < 2; i++)
             {
                 GameObject newSfxSource = new GameObject("sfx source " + (i + 1));
                 sfxSources[i] = newSfxSource.AddComponent<AudioSource>();
@@ -69,11 +72,10 @@ public class AudioManager : MonoBehaviour
                 break;
         }
 
-
-        musicSources.volume = bgmVolumePercent * masterVolumePercent;
+        musicSources[0].volume = bgmVolumePercent * masterVolumePercent;
+        musicSources[1].volume = bgmVolumePercent * masterVolumePercent;
         sfxSources[0].volume = sfxVolumePercent * masterVolumePercent;
         sfxSources[1].volume = sfxVolumePercent * masterVolumePercent;
-        sfxSources[2].volume = sfxVolumePercent * masterVolumePercent;
 
         PlayerPrefs.SetFloat("master vol", masterVolumePercent);
         PlayerPrefs.SetFloat("bgm vol", bgmVolumePercent);
@@ -82,10 +84,18 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMusic(AudioClip clip, float fadeDuration = 1)
     {
-        activeMusicSourceIndex = 1 - activeMusicSourceIndex;
-        musicSources.clip = clip;
-        musicSources.loop = true;
-        musicSources.Play();
+        musicSources[0].clip = clip;
+        musicSources[0].loop = true;
+        musicSources[0].Play();
+
+        StartCoroutine(AnimateMusicCrossfade(fadeDuration));
+    }
+
+    public void PlayAmbientSound(string ambientName, float fadeDuration = 1)
+    {
+        musicSources[1].clip = library.GetClipFromName(ambientName);
+        musicSources[1].loop = true;
+        musicSources[1].Play();
 
         StartCoroutine(AnimateMusicCrossfade(fadeDuration));
     }
@@ -98,28 +108,7 @@ public class AudioManager : MonoBehaviour
     public void PlaySound(AudioClip clip)
     {
         sfxSources[0].PlayOneShot(clip, sfxVolumePercent * masterVolumePercent);
-    }
-
-    public void PlayAmbientSound(string soundName)
-    {
-        sfxSources[1].PlayOneShot(library.GetClipFromName(soundName), sfxVolumePercent * masterVolumePercent);
-    }
-
-    public void PlayWalkSound(string platformType)
-    {
-        if (!sfxSources[2].isPlaying)
-        {
-            sfxSources[2].enabled = true;
-            sfxSources[2].loop = true;
-            sfxSources[2].Play();
-        }
-        switch (platformType)
-        {
-            case "grass":
-                sfxSources[2].clip = library.GetClipFromName("step_01");
-                break;
-        }
-    }
+    }    
 
     public void StopWalkSound()
     {
@@ -138,7 +127,7 @@ public class AudioManager : MonoBehaviour
         while (percent < 1)
         {
             percent += Time.deltaTime * 1 / duration;
-            musicSources.volume = Mathf.Lerp(0, bgmVolumePercent * masterVolumePercent, percent);
+            musicSources[0].volume = Mathf.Lerp(0, bgmVolumePercent * masterVolumePercent, percent);
             yield return null;
         }
     }

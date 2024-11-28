@@ -5,17 +5,71 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private float rotateValue = 15f;
+    private float _rotateValue = 15f;
+    private Vector3 _originRotation;
+
+    private bool _isRotating = false;
+
+    private int _aRotateCnt = 1;
+    private int _dRotateCnt = 1;
+    private int _sRotateCnt = 1;
+    private int _wRotateCnt = 1;    
+
+    private void Start()
+    {
+        _originRotation = transform.localEulerAngles;
+    }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (!_isRotating)
         {
-            transform.DOLocalRotate(new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y - rotateValue, transform.localEulerAngles.z), 0.5f);
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                if (_aRotateCnt >= 1)
+                {
+                    RotateCamera(0f, -_rotateValue, 0f);
+                    _dRotateCnt ++;
+                    _aRotateCnt --;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                if (_dRotateCnt >= 1)
+                {
+                    RotateCamera(0f, _rotateValue, 0f);
+                    _aRotateCnt ++;
+                    _dRotateCnt --;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.W))
+            {
+                if (_wRotateCnt >= 1)
+                {
+                    RotateCamera(-10f, 0f, 0f);
+                    _sRotateCnt ++;
+                    _wRotateCnt --;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.S))
+            {
+                if (_sRotateCnt >= 1)
+                {
+                    RotateCamera(10f, 0f, 0f);
+                    _wRotateCnt ++;
+                    _sRotateCnt --;
+                }
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            transform.DOLocalRotate(new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y + rotateValue, transform.localEulerAngles.z), 0.5f);
-        }
+    }
+
+    private void RotateCamera(float x, float y, float z)
+    {
+        _isRotating = true;
+        transform.DOLocalRotate(new Vector3(transform.localEulerAngles.x + x, transform.localEulerAngles.y + y, transform.localEulerAngles.z + z), 0.5f)
+            .OnComplete(() =>
+            {
+                _isRotating = false;
+            });
     }
 }

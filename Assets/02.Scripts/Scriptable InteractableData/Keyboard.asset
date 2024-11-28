@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Keyboard
   m_EditorClassIdentifier: 
   _name: "\uD0A4\uBCF4\uB4DC"
-  _skipTime: 600
+  _skipTime: 32000
   _wallooScore: 5
   _doubtRate: -20
-  _coolTime: 15
+  _coolTime: 0
