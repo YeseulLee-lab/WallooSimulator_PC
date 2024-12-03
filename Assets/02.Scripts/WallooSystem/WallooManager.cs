@@ -104,6 +104,16 @@ public class WallooManager : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    private Transform _boss;
+    public Transform Boss
+    {
+        get
+        {
+            return _boss;
+        }
+    }
+
     async UniTaskVoid UniTimer()
     {
         while (true)

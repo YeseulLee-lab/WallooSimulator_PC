@@ -139,10 +139,6 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
 
     public virtual void OnPointerDown(PointerEventData eventData)
     {
-        if (_curCoolTime <= 0f)
-        {
-        }
-
         if (WallooManager.instance.isWorkStart)
             PlayWallooAction();
         else
