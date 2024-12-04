@@ -91,5 +91,22 @@ public class Pyramid : MonoBehaviour
 
         Destroy(this.GetComponent<MeshCollider>());
         this.gameObject.AddComponent<MeshCollider>();
+        GetComponent<MeshCollider>().convex = true;
+        GetComponent<MeshCollider>().isTrigger = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            if (height < 2f)
+            {
+                Debug.Log("게임오버");
+            }
+            else
+            {
+                Debug.Log("경고");
+            }
+        }
     }
 }
