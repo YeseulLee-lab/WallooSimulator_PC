@@ -75,17 +75,13 @@ public class TargetIndicator : MonoBehaviour
         targetIndicator.indicatorUI.up = (newPosition - indicatorPosition).normalized;
         targetIndicator.indicatorUI.position = indicatorPosition;
 
-        Debug.Log(Vector3.Distance(targetIndicator.target.position, player.position));
-
-        if (Vector3.Distance(targetIndicator.target.position, player.position) < 2.2f)
-        {
-            targetIndicator.indicatorUI.GetComponent<Image>().sprite = _overSP;
-            Debug.Log("게임오버");
-        }
-        else if(Vector3.Distance(targetIndicator.target.position, player.position) < 4f && Vector3.Distance(targetIndicator.target.position, player.position) >= 2.2f)
+        if (Vector3.Distance(targetIndicator.target.position, player.position) < 3f)
         {
             targetIndicator.indicatorUI.GetComponent<Image>().sprite = _warningSP;
-            Debug.Log("경고");
+            if (WallooManager.instance.isWallooing)
+            {
+                UIManager.instance.GameResult.ShowOverResult();
+            }
         }
         else
         {
