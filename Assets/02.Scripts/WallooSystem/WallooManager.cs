@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -89,6 +90,8 @@ public class WallooManager : MonoBehaviour
     public Action _workStateChangedAction{ private get; set; }
     public Action<float> _doubtRateChangedAction { private get; set; }
     public Action<float> _wallooScoreChangedAction{ private get; set; }
+
+    public Queue<CustomInteractableBase> _interactableQueue = new Queue<CustomInteractableBase>();
 
     public Timer timer;
     private float _clearTime;

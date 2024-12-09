@@ -17,13 +17,16 @@ public class BossRadar : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (_height <= 1.8f)
+            if (WallooManager.instance.isWallooing)
             {
-                Debug.Log("게임오버");
-            }
-            else
-            {
-                Debug.Log("경고");
+                if (_height <= 2f)
+                {
+                    Debug.Log("게임오버");
+                }
+                else
+                {
+                    Debug.Log("경고");
+                }
             }
         }
     }

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(MeshRenderer), typeof(MeshFilter))]
 public class Pyramid : MonoBehaviour
 {
     public int polygon = 3;
@@ -93,20 +92,5 @@ public class Pyramid : MonoBehaviour
         this.gameObject.AddComponent<MeshCollider>();
         GetComponent<MeshCollider>().convex = true;
         GetComponent<MeshCollider>().isTrigger = true;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            if (height < 2f)
-            {
-                Debug.Log("게임오버");
-            }
-            else
-            {
-                Debug.Log("경고");
-            }
-        }
     }
 }
