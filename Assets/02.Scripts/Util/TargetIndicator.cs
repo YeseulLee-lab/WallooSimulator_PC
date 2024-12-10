@@ -71,21 +71,26 @@ public class TargetIndicator : MonoBehaviour
         indicatorPosition.y = Mathf.Clamp(indicatorPosition.y, rect.height / 2, Screen.height - rect.height / 2) + offset.y;
         indicatorPosition.z = 0;
 
-        //Update position and rotation
-        targetIndicator.indicatorUI.up = (newPosition - indicatorPosition).normalized;
+        
         targetIndicator.indicatorUI.position = indicatorPosition;
 
-        if (Vector3.Distance(targetIndicator.target.position, player.position) < 3f)
+        if (Mathf.Abs( Vector3.Dot(targetIndicator.target.forward, (targetIndicator.target.position - player.position).normalized)) < 0.6f)
         {
-            targetIndicator.indicatorUI.GetComponent<Image>().sprite = _warningSP;
-            if (WallooManager.instance.isWallooing)
             {
-                UIManager.instance.GameResult.ShowOverResult();
+                targetIndicator.indicatorUI.GetComponent<Image>().sprite = _warningSP;
+                targetIndicator.indicatorUI.up = Vector3.zero;
+
+                if (WallooManager.instance.isWallooing)
+                {
+                    UIManager.instance.GameResult.ShowOverResult();
+                }
             }
         }
         else
         {
             targetIndicator.indicatorUI.GetComponent<Image>().sprite = _defaultSP;
+            //Update position and rotation
+            targetIndicator.indicatorUI.up = (newPosition - indicatorPosition).normalized;
         }
     }
 
