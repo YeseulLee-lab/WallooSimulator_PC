@@ -7,6 +7,14 @@ public class SettingPopup : Popup
 {
     [SerializeField]
     private Button _backToMainBtn;
+    [SerializeField]
+    private Toggle _musicOnToggle;
+    [SerializeField]
+    private Toggle _musicOffToggle;
+    [SerializeField]
+    private Toggle _soundOnToggle;
+    [SerializeField]
+    private Toggle _soundOffToggle;
 
     protected override void Start()
     {
@@ -23,6 +31,35 @@ public class SettingPopup : Popup
             {
 
             });
+        });
+
+        _musicOnToggle.onValueChanged.AddListener((isOn) =>
+        {
+            if (isOn)
+            {
+                AudioManager.instance.SetVolume(1f, AudioManager.AudioChannel.Bgm);
+            }
+        });
+        _musicOffToggle.onValueChanged.AddListener((isOn) =>
+        {
+            if (isOn)
+            {
+                AudioManager.instance.SetVolume(0f, AudioManager.AudioChannel.Bgm);
+            }
+        }); 
+        _soundOnToggle.onValueChanged.AddListener((isOn) =>
+        {
+            if (isOn)
+            {
+                AudioManager.instance.SetVolume(1f, AudioManager.AudioChannel.Sfx);
+            }
+        }); 
+        _soundOffToggle.onValueChanged.AddListener((isOn) =>
+        {
+            if (isOn)
+            {
+                AudioManager.instance.SetVolume(0f, AudioManager.AudioChannel.Sfx);
+            }
         });
     }
 }
