@@ -82,7 +82,8 @@ public class TargetIndicator : MonoBehaviour
 
                 if (WallooManager.instance.isWallooing)
                 {
-                    UIManager.instance.GameResult.ShowOverResult();
+                    UIManager.instance.GameResult.ShowFailResult();
+                    WallooManager.instance.isWallooing = false;
                 }
             }
         }

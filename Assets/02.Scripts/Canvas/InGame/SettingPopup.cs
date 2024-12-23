@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,32 +32,44 @@ public class SettingPopup : Popup
             {
 
             });
+            AudioManager.instance.PlaySound("ButtonClick");
         });
+
+        if (AudioManager.instance.masterVolumePercent > 0)
+        {
+            _musicOnToggle.isOn = true;
+            _soundOnToggle.isOn = true;
+        }
+        else
+        {
+            _musicOnToggle.isOn = false;
+            _soundOnToggle.isOn = false;
+        }
+
+        _musicOnToggle.isOn = AudioManager.instance.bgmVolumePercent > 0;
+        _soundOnToggle.isOn = AudioManager.instance.sfxVolumePercent > 0;
 
         _musicOnToggle.onValueChanged.AddListener((isOn) =>
         {
             if (isOn)
             {
                 AudioManager.instance.SetVolume(1f, AudioManager.AudioChannel.Bgm);
+                AudioManager.instance.SetVolume(1f, AudioManager.AudioChannel.Master);
             }
-        });
-        _musicOffToggle.onValueChanged.AddListener((isOn) =>
-        {
-            if (isOn)
+            else
             {
                 AudioManager.instance.SetVolume(0f, AudioManager.AudioChannel.Bgm);
             }
-        }); 
+        });
+
         _soundOnToggle.onValueChanged.AddListener((isOn) =>
         {
             if (isOn)
             {
                 AudioManager.instance.SetVolume(1f, AudioManager.AudioChannel.Sfx);
+                AudioManager.instance.SetVolume(1f, AudioManager.AudioChannel.Master);
             }
-        }); 
-        _soundOffToggle.onValueChanged.AddListener((isOn) =>
-        {
-            if (isOn)
+            else
             {
                 AudioManager.instance.SetVolume(0f, AudioManager.AudioChannel.Sfx);
             }

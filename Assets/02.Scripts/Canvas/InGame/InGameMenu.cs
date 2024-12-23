@@ -13,6 +13,7 @@ public class InGameMenu : MonoBehaviour
         _settingBtn.onClick.AddListener(() =>
         {
             UIManager.instance.Setting.ShowPopup();
+            AudioManager.instance.PlaySound("ButtonClick");
         });
     }
 }

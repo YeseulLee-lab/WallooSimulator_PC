@@ -6,29 +6,60 @@ using UnityEngine.UI;
 
 public class GameResult : Popup
 {
+    [SerializeField]
+    private Button _backToMainBtn;
+
     [Header("--------GameResult--------")]
     [SerializeField]
     private Text _clearTime;
     [SerializeField]
-    private GameObject _gameOver;
+    private Text _result;
     [SerializeField]
-    private GameObject _gameSuccess;
+    private Image _resultImage;
+    [SerializeField]
+    private Sprite _failSp;
+    [SerializeField]
+    private Sprite _successSp;
 
-    public void ShowOverResult()
+    protected override void Start()
     {
+        base.Start();
+        _backToMainBtn.onClick.AddListener(() =>
+        {
+            PopupManager.Instance.twoButtonPopup.ShowPopup("메인 화면으로 돌아가시겠습니까?",
+            () =>
+            {
+                SceneSwitcher.Instance.SwitchScene(Define.SceneName.Login);
+            },
+            () =>
+            {
+
+            });
+            AudioManager.instance.PlaySound("ButtonClick");
+        });
+    }
+
+    public void ShowFailResult()
+    {
+        AudioManager.instance.PlaySound("Fail");
+
         ShowPopup();
-        _gameOver.SetActive(true);
+        _result.text = "칼퇴 실패...";
+        _resultImage.sprite = _failSp;
+        _clearTime.gameObject.SetActive(false);
     }
 
     public void ShowSuccessResult()
     {
+        AudioManager.instance.PlaySound("Success");
+
         ShowPopup();
+        _result.text = "칼퇴 성공!!!";
+        _resultImage.sprite = _successSp;
 
         int _minute = (int)WallooManager.instance.clearTime / 60 % 60;
         int _second = (int)WallooManager.instance.clearTime;
 
-        _clearTime.text = _minute.ToString("00") + ":" + _second.ToString("00");
-
-        _gameSuccess.SetActive(true);
+        _clearTime.text = "클리어 타임: " + _minute.ToString("00") + ":" + _second.ToString("00");
     }
 }

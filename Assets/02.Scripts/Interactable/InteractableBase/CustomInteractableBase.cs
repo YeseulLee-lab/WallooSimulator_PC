@@ -41,6 +41,11 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
 
         originTransform = transform;
     }
+
+    private void OnDestroy()
+    {
+        _coolTimeCancel.Cancel();
+    }
     #endregion
 
     #region Interact

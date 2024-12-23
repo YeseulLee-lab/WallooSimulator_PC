@@ -21,6 +21,8 @@ public class Popup : MonoBehaviour
         _closeBtn?.onClick.AddListener(() =>
         {
             HidePopup();
+
+            AudioManager.instance.PlaySound("ButtonClick");
         });
         _background?.onClick.AddListener(() =>
         {

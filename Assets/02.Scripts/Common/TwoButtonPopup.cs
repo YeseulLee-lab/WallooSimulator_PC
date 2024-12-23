@@ -18,6 +18,9 @@ public class TwoButtonPopup : Popup
 
     public void ShowPopup(string title, UnityAction yesAction = null, UnityAction noAction = null)
     {
+        _yesBtn.onClick.RemoveAllListeners();
+        _noBtn.onClick.RemoveAllListeners();
+
         gameObject.SetActive(true);
         _content.DOScale(1f, 0.5f).SetEase(Ease.InOutExpo);
 
@@ -25,13 +28,18 @@ public class TwoButtonPopup : Popup
         _yesBtn?.onClick.AddListener(() =>
         {
             gameObject.SetActive(false);
+            _content.transform.localScale = Vector3.zero;
             yesAction?.Invoke();
+
+            AudioManager.instance.PlaySound("ButtonClick");
         });
 
         _noBtn?.onClick.AddListener(() =>
         {
             HidePopup();
             noAction?.Invoke();
+
+            AudioManager.instance.PlaySound("ButtonClick");
         });
     }
 }
