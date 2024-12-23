@@ -20,6 +20,10 @@ public class GameResult : Popup
     private Sprite _failSp;
     [SerializeField]
     private Sprite _successSp;
+    [SerializeField]
+    private GameObject _failParticle;
+    [SerializeField]
+    private GameObject _successParticle;
 
     protected override void Start()
     {
@@ -47,6 +51,8 @@ public class GameResult : Popup
         _result.text = "Δ®Επ ½ΗΖΠ...";
         _resultImage.sprite = _failSp;
         _clearTime.gameObject.SetActive(false);
+
+        _failParticle.gameObject.SetActive(true);
     }
 
     public void ShowSuccessResult()
@@ -56,6 +62,8 @@ public class GameResult : Popup
         ShowPopup();
         _result.text = "Δ®Επ ΌΊ°ψ!!!";
         _resultImage.sprite = _successSp;
+
+        _successParticle.gameObject.SetActive(true);
 
         int _minute = (int)WallooManager.instance.clearTime / 60 % 60;
         int _second = (int)WallooManager.instance.clearTime;
