@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class RulesPopup : Popup
         base.Start();
         _nextBtn?.onClick.AddListener(() =>
         {
+            AudioManager.instance.PlaySound("ButtonClick");
             _rulesArr[_curIdx].SetActive(false);
             _curIdx++;
             _rulesArr[_curIdx].SetActive(true);
@@ -33,6 +35,7 @@ public class RulesPopup : Popup
 
         _prevBtn?.onClick.AddListener(() =>
         {
+            AudioManager.instance.PlaySound("ButtonClick");
             _rulesArr[_curIdx].SetActive(false);
             _curIdx--;
             _rulesArr[_curIdx].SetActive(true);
@@ -43,6 +46,20 @@ public class RulesPopup : Popup
                 _curIdx = 0;
                 return;
             }
+        });
+    }
+
+    public override void HidePopup()
+    {
+        _content.DOScale(0f, 0.5f).SetEase(Ease.InOutExpo).OnComplete(() =>
+        {
+            gameObject.SetActive(false);
+
+            _rulesArr[_curIdx].SetActive(false);
+            _curIdx = 0;
+            _nextBtn.gameObject.SetActive(true);
+            _prevBtn.gameObject.SetActive(false);
+            _rulesArr[_curIdx].SetActive(true);
         });
     }
 }

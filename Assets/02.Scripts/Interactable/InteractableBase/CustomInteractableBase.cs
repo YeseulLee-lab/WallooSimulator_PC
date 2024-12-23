@@ -41,6 +41,11 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
 
         originTransform = transform;
     }
+
+    private void OnDestroy()
+    {
+        _coolTimeCancel.Cancel();
+    }
     #endregion
 
     #region Interact
@@ -52,7 +57,6 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
             Debug.Log("월루 행동시작");
             if (_animator != null)
                 _animator.SetBool("isWallooing", true);
-            _isWallooing = true;
 
             AudioManager.instance.PlaySound(_interactionAC);
             if(_interactableData?.coolTime > 0f)
@@ -111,7 +115,6 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
                     _coolTimeImg.fillAmount = 0f;
                     ResetObject();
                     _curCoolTime = 0f;
-                    _isWallooing = false;
                 }
             }
         }
@@ -140,7 +143,16 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
     public virtual void OnPointerDown(PointerEventData eventData)
     {
         if (WallooManager.instance.isWorkStart)
+        {
+            if (_coolTimeImg.fillAmount > 0f)
+            {
+                PopupManager.Instance.MouseToast.ShowToast("쿨타임이 아직 지나지 않았습니다!");
+                return;
+            }
+
             PlayWallooAction();
+            WallooManager.instance.isWallooing = true;
+        }
         else
         {
             PopupManager.Instance.MouseToast.ShowToast("모니터를 켜야 근무를 시작합니다!");
@@ -150,7 +162,10 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
     public void OnPointerUp(PointerEventData eventData)
     {
         if (_animator != null)
+        {
             _animator.SetBool("isWallooing", false);
+            WallooManager.instance.isWallooing = false;
+        }
     }
     #endregion
 }

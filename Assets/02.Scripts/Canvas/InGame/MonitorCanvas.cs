@@ -31,10 +31,16 @@ public class MonitorCanvas : MonoBehaviour
     private void Init()
     {
         _wallooScoreText.text = WallooManager.instance.wallooScore.ToString();
+        _youtubeBtn.onClick.AddListener(OpenYoutubeLink);
     }
 
     private void UpdateWallooScore(float wallooScore)
     {
         _wallooScoreText.text = wallooScore.ToString();
+    }
+
+    private void OpenYoutubeLink()
+    {
+        Application.OpenURL("https://youtu.be/mnKHwSGBf9M");
     }
 }

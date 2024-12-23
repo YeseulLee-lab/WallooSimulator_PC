@@ -7,9 +7,9 @@ public class Login : MonoBehaviour
 {
     [Header("--------Audio--------")]
     [SerializeField]
-    private Sprite[] _audioSpArr;
-    [SerializeField]
     private Button _audioBtn;
+    [SerializeField]
+    private Image _volImg;
     [SerializeField]
     private AudioClip _bgmClip;
 
@@ -28,11 +28,13 @@ public class Login : MonoBehaviour
         _startBtn.onClick.AddListener(() =>
         {
             SceneSwitcher.Instance.SwitchScene(Define.SceneName.Office_1);
+            AudioManager.instance.PlaySound("ButtonClick");
         });
 
         _rulesBtn.onClick.AddListener(() =>
         {
             _rulesPopup.ShowPopup();
+            AudioManager.instance.PlaySound("ButtonClick");
         });
 
         _exitBtn.onClick.AddListener(() =>
@@ -46,21 +48,22 @@ public class Login : MonoBehaviour
                 {
                     
                 });
-            
+            AudioManager.instance.PlaySound("ButtonClick");
         });
 
-        _audioBtn.onClick.AddListener(SetAudioSp);
+        /*if (AudioManager.instance.masterVolumePercent > 0f)
+        {
+            AudioManager.instance.SetVolume(1f, AudioManager.AudioChannel.Master);
+            AudioManager.instance.SetVolume(1f, AudioManager.AudioChannel.Sfx);
+            AudioManager.instance.SetVolume(1f, AudioManager.AudioChannel.Bgm);
+
+            _volImg.gameObject.SetActive(true);
+        }*/
+
+        //_audioBtn.onClick.AddListener(SetAudioSp);
 
         AudioManager.instance.PlayMusic(_bgmClip);
-
-        if (AudioManager.instance.masterVolumePercent > 0f)
-        {
-            _audioBtn.GetComponent<Image>().sprite = _audioSpArr[1];
-        }
-        else
-        {
-            _audioBtn.GetComponent<Image>().sprite = _audioSpArr[0];
-        }
+        AudioManager.instance.StopAmbientSound();
     }
 
     private void SetAudioSp()
@@ -68,12 +71,14 @@ public class Login : MonoBehaviour
         if (AudioManager.instance.masterVolumePercent > 0f)
         {
             AudioManager.instance.SetVolume(0f, AudioManager.AudioChannel.Master);
-            _audioBtn.GetComponent<Image>().sprite = _audioSpArr[0];
+            _volImg.gameObject.SetActive(false);
         }
         else
         {
             AudioManager.instance.SetVolume(1f, AudioManager.AudioChannel.Master);
-            _audioBtn.GetComponent<Image>().sprite = _audioSpArr[1];
+            AudioManager.instance.SetVolume(1f, AudioManager.AudioChannel.Sfx);
+            AudioManager.instance.SetVolume(1f, AudioManager.AudioChannel.Bgm);
+            _volImg.gameObject.SetActive(true);
         }
     }
 }

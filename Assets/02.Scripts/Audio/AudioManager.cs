@@ -53,7 +53,7 @@ public class AudioManager : MonoBehaviour
 
             masterVolumePercent = PlayerPrefs.GetFloat("master vol", 1f);
             bgmVolumePercent = PlayerPrefs.GetFloat("bgm vol", 1f);
-            sfxVolumePercent = PlayerPrefs.GetFloat("sfx vol", 1);
+            sfxVolumePercent = PlayerPrefs.GetFloat("sfx vol", 1f);
         }
     }
 
@@ -100,6 +100,11 @@ public class AudioManager : MonoBehaviour
         StartCoroutine(AnimateMusicCrossfade(fadeDuration));
     }
 
+    public void StopAmbientSound()
+    {
+        musicSources[1].Stop();
+    }
+
     public void PlaySound(string soundName)
     {
         sfxSources[0].PlayOneShot(library.GetClipFromName(soundName), sfxVolumePercent * masterVolumePercent);
@@ -113,11 +118,6 @@ public class AudioManager : MonoBehaviour
     public void StopWalkSound()
     {
         sfxSources[2].enabled = false;
-    }
-
-    public void StopAmbientSound()
-    {
-        sfxSources[1].Stop();
     }
 
     IEnumerator AnimateMusicCrossfade(float duration)

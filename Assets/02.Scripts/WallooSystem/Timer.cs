@@ -31,6 +31,11 @@ public class Timer : MonoBehaviour
         CalculateTime(0f);
         WallooManager.instance._workStateChangedAction = () => StartTimer();
     }
+
+    private void OnDestroy()
+    {
+        _workTimeCTS.Cancel();
+    }
     #endregion
 
     #region Timer
