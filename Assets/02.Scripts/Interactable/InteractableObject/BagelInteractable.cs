@@ -14,6 +14,7 @@ public class BagelInteractable : CustomInteractableBase
         GetComponent<MeshRenderer>().enabled = false;
         _ateBagel.SetActive(true);
 
+        WallooManager.instance.isWallooing = false;
         //일정시간 후에 베이글 복원
     }
 
