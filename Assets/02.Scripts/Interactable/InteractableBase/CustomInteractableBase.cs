@@ -144,6 +144,12 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
     {
         if (WallooManager.instance.isWorkStart)
         {
+            if (_coolTimeImg.fillAmount > 0f)
+            {
+                PopupManager.Instance.MouseToast.ShowToast("쿨타임이 아직 지나지 않았습니다!");
+                return;
+            }
+
             PlayWallooAction();
             WallooManager.instance.isWallooing = true;
         }
