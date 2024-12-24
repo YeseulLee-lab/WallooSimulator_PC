@@ -66,7 +66,7 @@ public class GameResult : Popup
         _successParticle.gameObject.SetActive(true);
 
         int _minute = (int)WallooManager.instance.clearTime / 60 % 60;
-        int _second = (int)WallooManager.instance.clearTime;
+        int _second = (int)WallooManager.instance.clearTime % 60;
 
         _clearTime.text = "클리어 타임: " + _minute.ToString("00") + ":" + _second.ToString("00");
     }
