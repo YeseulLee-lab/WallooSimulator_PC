@@ -25,8 +25,5 @@ September 2024 - October 2024
 Client Development: 1<br>
 3D Designer: 1
 
-## Game Introduction YouTube Link📼
-https://youtu.be/mnKHwSGBf9M?si=KCqD6Siuf5xEtjVf
-
 ## Game Download Link👇
 https://yeseullee-lab.itch.io/office-play
