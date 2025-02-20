@@ -30,7 +30,7 @@ public class GameResult : Popup
         base.Start();
         _backToMainBtn.onClick.AddListener(() =>
         {
-            PopupManager.Instance.twoButtonPopup.ShowPopup("메인 화면으로 돌아가시겠습니까?",
+            PopupManager.Instance.twoButtonPopup.ShowPopup("Would you like to return to the main menu?",
             () =>
             {
                 SceneSwitcher.Instance.SwitchScene(Define.SceneName.Login);
@@ -48,7 +48,7 @@ public class GameResult : Popup
         AudioManager.instance.PlaySound("Fail");
 
         ShowPopup();
-        _result.text = "칼퇴 실패...";
+        _result.text = "Failed to leave work on time...";
         _resultImage.sprite = _failSp;
         _clearTime.gameObject.SetActive(false);
 
@@ -60,7 +60,7 @@ public class GameResult : Popup
         AudioManager.instance.PlaySound("Success");
 
         ShowPopup();
-        _result.text = "칼퇴 성공!!!";
+        _result.text = "Succeeded to leave work on time!!";
         _resultImage.sprite = _successSp;
 
         _successParticle.gameObject.SetActive(true);
@@ -68,6 +68,6 @@ public class GameResult : Popup
         int _minute = (int)WallooManager.instance.clearTime / 60 % 60;
         int _second = (int)WallooManager.instance.clearTime % 60;
 
-        _clearTime.text = "클리어 타임: " + _minute.ToString("00") + ":" + _second.ToString("00");
+        _clearTime.text = "Clear Time " + _minute.ToString("00") + ":" + _second.ToString("00");
     }
 }

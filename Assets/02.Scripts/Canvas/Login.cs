@@ -39,7 +39,7 @@ public class Login : MonoBehaviour
 
         _exitBtn.onClick.AddListener(() =>
         {
-            PopupManager.Instance.twoButtonPopup.ShowPopup("게임을 종료하시겠습니까?", 
+            PopupManager.Instance.twoButtonPopup.ShowPopup("Are you sure you want to quit the game?", 
                 () =>
                 {
                     Application.Quit();

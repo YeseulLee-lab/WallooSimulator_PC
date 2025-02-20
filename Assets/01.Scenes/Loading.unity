@@ -191,7 +191,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uCD9C\uADFC\uC911"
+  m_Text: Going to Work
 --- !u!222 &103377607
 CanvasRenderer:
   m_ObjectHideFlags: 0

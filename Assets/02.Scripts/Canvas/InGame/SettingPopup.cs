@@ -22,7 +22,7 @@ public class SettingPopup : Popup
         base.Start();
         _backToMainBtn.onClick.AddListener(() =>
         {
-            PopupManager.Instance.twoButtonPopup.ShowPopup("메인 화면으로 돌아가시겠습니까?", 
+            PopupManager.Instance.twoButtonPopup.ShowPopup("Would you like to return to the main menu?", 
             () =>
             {
                 HidePopup();

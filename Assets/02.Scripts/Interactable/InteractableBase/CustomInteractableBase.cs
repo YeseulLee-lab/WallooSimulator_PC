@@ -73,7 +73,7 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
         }
         else
         {
-            PopupManager.Instance.MouseToast.ShowToast("아직 쿨타임이 안찼습니다.");
+            PopupManager.Instance.MouseToast.ShowToast("The cooldown has not finished yet!");
         }
     }
 
@@ -146,7 +146,7 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
         {
             if (_coolTimeImg.fillAmount > 0f)
             {
-                PopupManager.Instance.MouseToast.ShowToast("쿨타임이 아직 지나지 않았습니다!");
+                PopupManager.Instance.MouseToast.ShowToast("The cooldown has not finished yet!");
                 return;
             }
 
@@ -155,7 +155,7 @@ public class CustomInteractableBase : MonoBehaviour, IPointerEnterHandler, IPoin
         }
         else
         {
-            PopupManager.Instance.MouseToast.ShowToast("모니터를 켜야 근무를 시작합니다!");
+            PopupManager.Instance.MouseToast.ShowToast("You need to turn on the monitor to start working!");
         }
     }
 

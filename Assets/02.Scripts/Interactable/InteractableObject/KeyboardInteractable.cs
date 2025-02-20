@@ -16,7 +16,7 @@ public class KeyboardInteractable : CustomInteractableBase
         }
         else
         {
-            PopupManager.Instance.MouseToast.ShowToast("모니터를 켜야 근무를 시작합니다!");
+            PopupManager.Instance.MouseToast.ShowToast("You need to turn on the monitor to start working!");
         }
     }
 }

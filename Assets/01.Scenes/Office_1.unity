@@ -1616,7 +1616,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uACBD\uACE0"
+  m_Text: warning
 --- !u!222 &159565112
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3096,7 +3096,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uCE7C\uD1F4 \uC2E4\uD328..."
+  m_Text: Failed to leave work on time...
 --- !u!222 &330982211
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4116,7 +4116,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uACBD\uACE0"
+  m_Text: warning
 --- !u!222 &451176081
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7640,7 +7640,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC6D4\uB8E8 \uC810\uC218"
+  m_text: Corporate Sneak Score
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c83e34e31bdb7045bda253f98dcd828, type: 2}
   m_sharedMaterial: {fileID: 694313510344476120, guid: 4c83e34e31bdb7045bda253f98dcd828, type: 2}
@@ -11232,7 +11232,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uACBD\uACE0"
+  m_Text: warning
 --- !u!222 &1399596428
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15070,7 +15070,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC131\uACF5!!"
+  m_Text: Succeed!!
 --- !u!222 &1876650727
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17702,7 +17702,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC6D4\uB8E8 \uC810\uC218\n1000"
+  m_text: 'Corporate Sneak Score
+
+    1000'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c83e34e31bdb7045bda253f98dcd828, type: 2}
   m_sharedMaterial: {fileID: 694313510344476120, guid: 4c83e34e31bdb7045bda253f98dcd828, type: 2}
